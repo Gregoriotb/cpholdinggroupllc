@@ -227,16 +227,23 @@ export default function App() {
       {/* ============================================================ */}
       <header className="relative h-screen flex" id="inicio">
         {/* Left - Tech */}
-        <div className="hidden md:block w-1/2 relative bg-navy-corp">
+        <div className="hidden md:block w-1/2 relative bg-navy-corp overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-[8s] ease-out hover:scale-105"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=80')",
+            }}
+          />
           <div
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(135deg, rgba(0,59,92,0.92) 0%, rgba(0,59,92,0.75) 100%)',
+                'linear-gradient(135deg, rgba(0,59,92,0.88) 0%, rgba(0,59,92,0.7) 100%)',
             }}
           />
           <div
-            className="absolute inset-0 opacity-[0.04] bg-repeat"
+            className="absolute inset-0 opacity-[0.05] bg-repeat"
             style={{
               backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='none' stroke='white' stroke-width='.5'/%3E%3C/svg%3E\")",
             }}
@@ -244,16 +251,22 @@ export default function App() {
         </div>
 
         {/* Right - Food */}
-        <div className="hidden md:block w-1/2 relative bg-green-food">
+        <div className="hidden md:block w-1/2 relative bg-green-food overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-[8s] ease-out hover:scale-105"
+            style={{
+              backgroundImage: "url('/img1.webp')",
+            }}
+          />
           <div
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(135deg, rgba(46,125,50,0.92) 0%, rgba(46,125,50,0.75) 100%)',
+                'linear-gradient(135deg, rgba(46,125,50,0.85) 0%, rgba(46,125,50,0.65) 100%)',
             }}
           />
           <div
-            className="absolute inset-0 opacity-[0.04] bg-repeat"
+            className="absolute inset-0 opacity-[0.05] bg-repeat"
             style={{
               backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='white'/%3E%3C/svg%3E\")",
             }}
@@ -411,6 +424,157 @@ export default function App() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* FACILITIES GALLERY                                            */}
+      {/* ============================================================ */}
+      <section id="instalaciones" className="py-20 lg:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading sub="Centros logísticos propios en Miami y operaciones internacionales con controles FDA certificados.">
+              Nuestras Instalaciones
+            </SectionHeading>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Featured large card */}
+            <Reveal delay={0.1}>
+              <div className="group relative rounded-lg overflow-hidden shadow-sm h-full min-h-[440px]">
+                <img
+                  src="/img1.webp"
+                  alt="Centro de distribución CP Holding"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      'linear-gradient(180deg, rgba(0,59,92,0.1) 40%, rgba(0,59,92,0.92) 100%)',
+                  }}
+                />
+                <div className="relative z-10 flex flex-col justify-end h-full p-8">
+                  <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold-premium mb-3">
+                    División Food
+                  </span>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-white leading-tight mb-2">
+                    Bodega Refrigerada Miami
+                  </h3>
+                  <p className="text-sm text-white/80 max-w-md">
+                    5,000 m² de almacenamiento con cadena de frío continua y
+                    trazabilidad FDA completa.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Right column */}
+            <div className="grid grid-cols-1 gap-6">
+              <Reveal delay={0.2}>
+                <div className="group relative rounded-lg overflow-hidden shadow-sm h-[210px]">
+                  <img
+                    src="/img2.jpg"
+                    alt="Consolidación de carga"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        'linear-gradient(180deg, rgba(46,125,50,0.1) 40%, rgba(46,125,50,0.9) 100%)',
+                    }}
+                  />
+                  <div className="relative z-10 flex flex-col justify-end h-full p-6">
+                    <h3 className="font-display text-xl font-bold text-white mb-1">
+                      Consolidación de Carga
+                    </h3>
+                    <p className="text-sm text-white/80">
+                      Importación directa, sin intermediarios.
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.3}>
+                <div className="group relative rounded-lg overflow-hidden shadow-sm h-[210px]">
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
+                    alt="Data center tech"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        'linear-gradient(180deg, rgba(0,59,92,0.15) 30%, rgba(0,59,92,0.92) 100%)',
+                    }}
+                  />
+                  <div className="relative z-10 flex flex-col justify-end h-full p-6">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold-premium mb-1">
+                      División Tech
+                    </span>
+                    <h3 className="font-display text-xl font-bold text-white">
+                      Infraestructura Empresarial
+                    </h3>
+                    <p className="text-sm text-white/80">
+                      Hardware Tier 1 certificado para misión crítica.
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* Bottom thin strip with img3 */}
+          <Reveal delay={0.2}>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=80',
+                  title: 'Cadena de Frío',
+                  desc: 'Trazabilidad end-to-end.',
+                },
+                {
+                  src: '/img3.png',
+                  title: 'Distribución Mayorista',
+                  desc: 'Hardware y accesorios corporativos.',
+                },
+                {
+                  src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&q=80',
+                  title: 'Importación Premium',
+                  desc: 'Gastronomía y tecnología mundial.',
+                },
+              ].map((card, i) => (
+                <Reveal key={card.title} delay={0.1 + i * 0.1}>
+                  <div className="group relative rounded-lg overflow-hidden shadow-sm h-[180px]">
+                    <img
+                      src={card.src}
+                      alt={card.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          'linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%)',
+                      }}
+                    />
+                    <div className="relative z-10 flex flex-col justify-end h-full p-5">
+                      <h4 className="font-display text-lg font-bold text-white">
+                        {card.title}
+                      </h4>
+                      <p className="text-xs text-white/80">{card.desc}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
